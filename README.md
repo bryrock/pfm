@@ -31,7 +31,6 @@ pfm($wrapper, 'my wrapped entity');
 EXAMPLE USAGE
 -------------
 $node_wrapper = entity_metadata_wrapper('node',$nid);
-
 pfm($node_wrapper);
 
 OR
