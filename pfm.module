@@ -1,0 +1,32 @@
+<?php
+/**
+ * @file
+ * This module holds one function to assist Drupal development.
+ */
+
+/**
+ * Prints a variable to the 'message' area of the page.
+ *
+ * Uses drupal_set_message().
+ *
+ * @param $wrapper
+ *   An arbitrary wrapped object to debug.
+ *
+ * @param $notation
+ *   Optional notation to override default.
+ *
+ * @return values
+ *   The unaltered wrapped object value.
+ */
+function pfm($wrapper,$notation = FALSE) {
+  if (user_access('access devel information')) {
+    $values = array();
+    foreach ($wrapper->getPropertyInfo() as $key => $val) {
+      $values[$key] = $wrapper->$key->value();
+    }
+  }
+  if(!$notation) {
+    return dpm($values,'wrapped object values');
+  }
+  return dpm($values, $notation);
+}
