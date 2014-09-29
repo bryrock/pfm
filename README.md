@@ -9,6 +9,14 @@ Wrapped entities in Drupal contain protected functions, which prevents casual vi
 
 pfm is a simple function that will reveal the values contained in a wrapped entity, then return those with dpm.
 
+Dependencies
+------------
+This explicity depends on the devel module.
+https://www.drupal.org/project/devel
+
+It also implicity depends on the Entity API.
+https://www.drupal.org/project/entity
+
 EASY SYNTAX
 -----------
 
