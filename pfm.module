@@ -26,7 +26,7 @@ function pfm($wrapper,$notation = FALSE) {
     }
   }
   if(!$notation) {
-    return dpm($values,'wrapped object values');
+    return dpm($values,'wrapped object properties and their values');
   }
   return dpm($values, $notation);
 }
